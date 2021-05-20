@@ -1,15 +1,29 @@
-let temperature = 0
 input.onButtonPressed(Button.A, function () {
-    // if temperature less than 18 show string c and +1
-    if (true) {
-        temperature = 100
-        basic.showString("" + (temperature))
+    temperature += 1
+    basic.showString("" + (temperature))
+    if (temperature < 18) {
+        basic.showString("C")
+    }
+    if (temperature >= 18) {
+        basic.showString("H")
+    }
+})
+input.onButtonPressed(Button.AB, function () {
+    temperature = 15
+    basic.showString("" + (temperature))
+    if (temperature < 18) {
+        basic.showString("C")
     }
 })
 input.onButtonPressed(Button.B, function () {
-    // if temperature more than 18 show string h and -1
-    if (true) {
-        temperature = 0
-        basic.showString("" + (temperature))
+    temperature += -1
+    basic.showString("" + (temperature))
+    if (temperature < 18) {
+        basic.showString("C")
+    }
+    if (temperature >= 18) {
+        basic.showString("H")
     }
 })
+let temperature = 0
+temperature = 25
